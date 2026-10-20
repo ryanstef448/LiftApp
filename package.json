@@ -1,0 +1,10 @@
+{
+  "name": "liftapp",
+  "private": true,
+  "scripts": {
+    "start:server": "npm --prefix server start",
+    "start:client": "npm --prefix client dev",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev"
+  }
+}

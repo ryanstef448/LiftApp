@@ -28,7 +28,7 @@ function safeUser(user) {
 }
 
 app.get('/', (req, res) => {
-  res.send('Hello from the LiftApp backend (SQL powered with profiles)!');
+  res.send('Hello from the Lift Off backend (SQL powered with profiles)!');
 });
 
 // ==========================================
@@ -701,7 +701,7 @@ app.delete('/api/weights/:id', (req, res) => {
 
 if (require.main === module) {
   app.listen(port, () => {
-    console.log(`LiftApp Server running at http://localhost:${port}`);
+    console.log(`Lift Off Server running at http://localhost:${port}`);
   });
 }
 

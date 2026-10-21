@@ -1,4 +1,4 @@
-# LiftApp
+# Lift Off
 App to track nutrition and lifting progress.
 
 ## Running the Application

@@ -16,7 +16,7 @@ function NavigationHeader() {
         <div className="nav-left">
           <NavLink to="/" className="brand-logo">
             <span className="brand-icon">⚡</span>
-            <span className="brand-name">LiftApp</span>
+            <span className="brand-name">Lift Off</span>
           </NavLink>
 
           <nav className="main-nav-tabs">

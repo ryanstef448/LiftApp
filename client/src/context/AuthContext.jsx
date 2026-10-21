@@ -5,7 +5,7 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
     try {
-      const saved = localStorage.getItem('liftapp_user');
+      const saved = localStorage.getItem('liftoff_user') || localStorage.getItem('liftapp_user');
       return saved ? JSON.parse(saved) : null;
     } catch {
       return null;
@@ -34,8 +34,9 @@ export function AuthProvider({ children }) {
   const saveUser = (userData) => {
     setUser(userData);
     if (userData) {
-      localStorage.setItem('liftapp_user', JSON.stringify(userData));
+      localStorage.setItem('liftoff_user', JSON.stringify(userData));
     } else {
+      localStorage.removeItem('liftoff_user');
       localStorage.removeItem('liftapp_user');
     }
   };
@@ -46,7 +47,7 @@ export function AuthProvider({ children }) {
       setLoading(true);
       await fetchProfiles();
 
-      const stored = localStorage.getItem('liftapp_user');
+      const stored = localStorage.getItem('liftoff_user') || localStorage.getItem('liftapp_user');
       if (stored) {
         try {
           const parsed = JSON.parse(stored);

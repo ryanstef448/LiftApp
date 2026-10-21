@@ -1,5 +1,5 @@
 {
-  "name": "liftapp",
+  "name": "lift-off",
   "private": true,
   "scripts": {
     "start:server": "npm --prefix server start",
